@@ -1,0 +1,22 @@
+{
+  "name": "technical-assessment",
+  "version": "1.0.0",
+  "description": "give campus technical assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnLouisRumingan/give-campus.git"
+  },
+  "author": "John-Louis Rumingan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnLouisRumingan/give-campus/issues"
+  },
+  "homepage": "https://github.com/JohnLouisRumingan/give-campus#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
