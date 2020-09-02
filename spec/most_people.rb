@@ -9,4 +9,9 @@ describe "/most_people.rb" do
         expect(answer).to eq([])
     end
 
+    it "most_people should return an empty array if passed an array with zero elements"  do
+        answer = most_people([])
+        expect(answer).to eq([])
+    end
+
 end 
