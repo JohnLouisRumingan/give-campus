@@ -2,10 +2,9 @@
 function mostPeople(array){
 
     const allYears = {};
-    const mostAlive = [];
 
-    if(!Array.isArray(array)) return mostAlive;
-    if(array.length <= 0 ) return mostAlive;
+    if(!Array.isArray(array)) return [];
+    if(array.length <= 0 ) return [];
 
     for(let person of array){
 
@@ -21,7 +20,10 @@ function mostPeople(array){
 
     const highestPop = allYears[Object.keys(allYears).reduce((a,b) => allYears[a] > allYears[b]? a : b)];
 
-    return Object.keys(allYears).filter(pop => allYears[pop] === highestPop).map( year => parseInt(year, 10)).sort((a,b) => a-b)
+    return Object.keys(allYears)
+                .filter(pop => allYears[pop] === highestPop)
+                .map( year => parseInt(year, 10))
+                .sort((a,b) => a-b)
 }
 
 function lifetime(birth, death, step = 1) {
@@ -64,7 +66,6 @@ We will have to turn these strings into integers so we will use a map method.
 Careful: parseInt requires two arguments every time it is invoked, and simply using .map(parseInt) returns unexpected results!
 To be careful, we are using a one-line arrow notation to keep it succinct and pass the argument of radix 10 to parseInt.
 Because Objects in JavaScript are not guaranteed to have an order, we lastly use .sort() to order the years sequentially.
-At this point, I remove the declaration of highestYears since this variable is the one to be returned.
 
 I have not done strict checking of strings as I have in the longest stretch algorithm and will instead rely on type coersion in JavaScript
 
