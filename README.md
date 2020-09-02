@@ -22,4 +22,4 @@ Run ```rspec --init```
 Run tests using ```rspec spec/<relative_filename>```
 Ruby methods and tests will mirror the same philosophy in JavaScript, but using appropriate methods.
 Ruby explanations will contain notes for differences due to language.
-Tests for ruby are found in [spec](./spec) folder.
+Tests for ruby are found in the [spec](./spec) folder.

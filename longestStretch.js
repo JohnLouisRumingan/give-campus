@@ -30,6 +30,7 @@ function longestStretch(array){
     return maxCounter;
 }
 
+module.exports = longestStretch;
 
 /* 
 This function assumes that we are given an array, but a linked list is a similar format and 
@@ -65,4 +66,3 @@ I believe that tests that cover integer, array, and NaN are sufficient here.
 */
 
 
-module.exports = longestStretch;
