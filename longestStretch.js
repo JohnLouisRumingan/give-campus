@@ -10,9 +10,9 @@ function longestStretch(array){
 
     for(let i=0; i<array.length; i++){
 
-        const number = parseInt(array[i]);
+        const number = parseInt(array[i], 10);
 
-        if( Number.isNaN(number)) return -2;
+        if( Number.isNaN(number) ) return -2;
 
         if(number != currentNumber){
             currentCounter = 1;
@@ -58,6 +58,9 @@ This is a different return from a non-array argument so it would be easier to fi
 This function allows strings that would be parsed as integer such as "40 years" in the use case of parsing through data that might
 contain alphanumeric characters but are formatted with the integer portion in front. This works with the other test case of "They were 7" to 
 flag potentially unsanitized data if this is the case.
+
+However, I think the main case of sanitizing data should be handled by a different function to prevent tight coupling or side effects in this one.
+I believe that tests that cover integer, array, and NaN are sufficient here.
 
 */
 
