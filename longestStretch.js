@@ -1,13 +1,3 @@
-/*
-
-1. Write a function which takes a list of numbers and returns the length of the longest 
-continuous stretch of a single number.  For example, on the input [1,7,7,3], the correct 
-return is 2, because there are two 7's in a row. On the input [1,7,7,3,9,9,9,4,9], the correct 
-return is 3, since there are three 9’s in a row.
-
-
-*/
-
 function longestStretch(array){
 
     if(!Array.isArray(array)) return -1;
@@ -20,7 +10,7 @@ function longestStretch(array){
 
     for(let i=0; i<array.length; i++){
 
-        let number = parseInt(array[i]);
+        const number = parseInt(array[i]);
 
         if( Number.isNaN(number)) return -2;
 
@@ -65,6 +55,9 @@ The function expects an integers but an array of strings that are numbers may al
 the number parses a string to an integer datatype.
 If a NaN is included anywhere in the array of elements, the function returns a -2. 
 This is a different return from a non-array argument so it would be easier to find bugs and expected data types.
+This function allows strings that would be parsed as integer such as "40 years" in the use case of parsing through data that might
+contain alphanumeric characters but are formatted with the integer portion in front. This works with the other test case of "They were 7" to 
+flag potentially unsanitized data if this is the case.
 
 */
 
