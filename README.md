@@ -7,7 +7,7 @@ This technical assessment includes both JavaScript and Ruby versions of the algo
 
 ## Installation instructions:
 
-```git clone ```(/) to a local repository.
+```git clone ``` [This repository](./) to a local repository.
 
 ### Using JavaScript
 After cloning this repository, install dependencies using ```npm install```.
@@ -22,4 +22,4 @@ Run ```rspec --init```
 Run tests using ```rspec spec/<relative_filename>```
 Ruby methods and tests will mirror the same philosophy in JavaScript, but using appropriate methods.
 Ruby explanations will contain notes for differences due to language.
-Tests for ruby are found in (./spec).
+Tests for ruby are found in [spec](./spec) folder.

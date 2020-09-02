@@ -43,3 +43,6 @@ end
 # JavaScript has type coersion, but I wanted to use parseInt in the case of NaN and how it handles strings.
 # For Ruby, I can use type_of. I can do the same in JavaScript and remove objects or other datatypes. 
 # However, as explained in the JS function, I think expectation of strings or integers as elements is reasonable.
+# There is a danger in accepting strings in Ruby due to the silent conversion of strings like "aB" into integer 0 
+# which would produce unexpected results. The method I created only assumes that there is a reasonable expectation of 
+# strings that include numbers. 
