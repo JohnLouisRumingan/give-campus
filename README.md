@@ -14,3 +14,7 @@ All unit tests are included under the main folder.
 Each JavaScript file will include notes and assumptions on the algorithms.
 Ruby methods and tests will mirror the same philosophy in JavaScript, but using appropriate methods.
 Ruby explanations will contain notes for differences due to language.
+
+
+TODO:
+Currently test not passing if inputting strings of numbers

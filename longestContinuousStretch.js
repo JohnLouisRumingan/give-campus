@@ -22,11 +22,13 @@ function longestStretch(array){
 
         let number = parseInt(array[i]);
 
-        if(number !== currentNumber){
+        if( Number.isNaN(number)) return -2;
+
+        if(number != currentNumber){
             currentCounter = 1;
-            currentNumber = array[i];
+            currentNumber = number;
         }
-        else{
+        else if(number === currentNumber){
             currentCounter++;
         }
 
@@ -53,15 +55,16 @@ would cause an overflow error. If there was the possibility of that, I would ass
 been sanitized at an earlier point by a different function and the offending elements removed before being passed 
 into this one. If the array consists of strings, we will need to convert each string element first before being considered.
 
-
 Next line has an if/then statement for the edge case of a 0-length empty array, in which case it will return 0.
 Using array.length <= 0 also covers edge cases where an object that is an instance of an Array can have a property called 
-length that has a negative integer value. This is why (array instanceOf Array) is not used for testing, but there may be an 
+length that has a negative integer value. This is why (array instanceOf Array) is not used for comparison, but there may be an 
 edge case I cannot think of currently. This edge case should be covered by Array.isArray, but length <= 0 covers 0 as well.
 
 The for loop runs through the array just once. 
 The function expects an integers but an array of strings that are numbers may also be entered. If this is the case,
-the number coerces a string to an integer datatype.
+the number parses a string to an integer datatype.
+If a NaN is included anywhere in the array of elements, the function returns a -2. 
+This is a different return from a non-array argument so it would be easier to find bugs and expected data types.
 
 */
 
