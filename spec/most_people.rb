@@ -14,4 +14,9 @@ describe "/most_people.rb" do
         expect(answer).to eq([])
     end
 
+    it "when mostPeople takes in argument [[1910, 1950], [1900, 1951], [1945, 2000]] it returns [1945, 1946, 1947, 1948, 1949, 1950]" do 
+        answer = most_people([[1910, 1950], [1900, 1951], [1945, 2000]])
+        expect(answer).to eq([1945, 1946, 1947, 1948, 1949, 1950])
+    end 
+
 end 

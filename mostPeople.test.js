@@ -34,20 +34,9 @@ test('mostPeople can take in mixed numbers for BCE and CE with the assumption th
     expect(mostPeople([[-5, 2], [-3, 5], [-20, 10]])).toStrictEqual([-3, -2, -1, 0, 1, 2])
 })
 
-
-
-
-// test('To be or to equal', () => {
-//     const obj = { a: 2 };
-//     expect(obj).toBe(obj);
-//     expect({ a: 2 }).not.toBe({ a: 2 });
-//     expect({ a: 2 }).toEqual({ a: 2 });
-//     expect({ a: 2 }).not.toEqual({ b: 3});
-//     expect({ a: 2 }).toStrictEqual({ a: 2 });
-//     expect({ a: 2 }).toEqual({ a: 2, b: undefined });
-//     expect({ a: 2 })
-//       .not.toStrictEqual({ a: 2, b: undefined });
-// });  
+test('mostPeople can take arguments of multiple births and deaths in the same year', () => {
+    expect(mostPeople([[2000, 2010], [2000, 2010], [2000, 2010], [1999, 2011]])).toStrictEqual([2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010])
+}) 
 
 /*
 Test explanations:
@@ -60,5 +49,7 @@ I also want a full comparison of arrays and not just if certain values exist, so
 
 Function should consider other data types and empty arrays.
 Delegation to helper function should correctly create an array of integers.
+Function should correctly evaluate an array of multiple people born and died on the same year.
+
 An assumption is made that there is a year 0. 
 */
