@@ -54,6 +54,8 @@ This is accomplished by a helper function called lifetime.
 This is essentially a spread operator starting from the birth year until death year with an optional step argument of 1.
 Lifespan therefore is an array of years containing one person's lifespan.
 A for loop then adds these years to the allYears hash and records the number of people alive during those years.
+I utilized a for loop for lines 9 and 15 instead of a map because we are not trying to modify elements of the original array. 
+A map would suggest that we wanted to leave the original elements alone but return a new array of those same elements.
 
 Highest pop uses an Object enumerable through all years (keys/properties) of allYears and returns the key of the value of the highest population.
 allYears[key] then assigns the value.
@@ -69,4 +71,6 @@ Because Objects in JavaScript are not guaranteed to have an order, we lastly use
 
 I have not done strict checking of strings as I have in the longest stretch algorithm and will instead rely on type coersion in JavaScript
 
+An assumption is made that there is a year 0. 
+We can use the delete operator with a line such as if(allYears[0]){delete allYears[0]} to remove year 0 before determining the highest population.
 */

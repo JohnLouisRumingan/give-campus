@@ -23,7 +23,7 @@ def most_people(array)
     return all_years.select{ |year, pop| pop == highest_pop }.keys
 end 
 
-# Ruby has several short ways to populate an array with a range of numbers.
+# Ruby has several succinct methods to populate an array with a range of numbers.
 # No need to create a separate function.
 # highest pop returns key value pair, but we are only interested in the value so we append [1] to it.
 # all_years select works with hashes but returns a hash with only the highest values. We only care about the keys and not values.

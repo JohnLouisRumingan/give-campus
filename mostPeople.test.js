@@ -52,4 +52,5 @@ Delegation to helper function should correctly create an array of integers.
 Function should correctly evaluate an array of multiple people born and died on the same year.
 
 An assumption is made that there is a year 0. 
+We can use the delete operator with a line such as if(allYears[0]){delete allYears[0]} to remove year 0 before determining the highest population.
 */
