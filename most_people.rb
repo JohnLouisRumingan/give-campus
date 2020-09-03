@@ -3,6 +3,7 @@ require 'pry'
 def most_people(array)
 
     return [] if !array.kind_of?(Array)
+    return [] if array.length <= 0 
 
     all_years = {}
 
